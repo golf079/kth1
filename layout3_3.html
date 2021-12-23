@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Layout3_3</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        #wrap {width: 1200px; margin: 0 auto;}
+        body {background-color: #e3f2fd;}
+        .header {width: 100%; height: 100px;background-color: #81d4fa}
+        .aside {float:left; width: 30%; height: 900px;background-color: #4fc3f6}
+        .article1 {float:left; width: 70%; height: 300px;background-color: #29b6f6}
+        .article2 {float:left; width: 70%; height: 300px;background-color: #03a9f4}
+        .article3 {float:left; width: 70%; height: 300px;background-color: #039be5}
+        .footer {clear: both; width: 100%; height: 100px; background-color: #0288d1}
+
+        /* 화면 너비 0 ~ 1200 */
+        @media (max-width: 1240px){
+            #wrap {width: 95%;}
+            .article1{height: 450px;}
+            .article2{height: 450px;}
+            .article3{width:100%; height:300px;}
+        }
+        /* 화면 너비 0 ~ 768 */
+        @media (max-width: 768px){
+            #wrap {width: 100%;}
+            .aside {width: 50%; height: 450px;}
+            .article1{width: 50%; height: 450px;}
+            .article2{width: 100%; height: 300px;}
+        }
+        /* 화면 너비 0 ~ 460 */
+        @media (max-width: 600px){
+            #wrap {width: 100%;}
+            .aside { width: 100%; height: 300px}
+            .article1 { width:50%; height: 300px;}
+            .article2 { width:50%; height: 300px;}
+            .article3 {width:100%; height: 150px;}
+            .section { width: 100%; height: 300px}
+        }
+        /* 화면 너비 0 ~ 460 */
+        @media (max-width: 550px){
+            #wrap {width: 100%;}
+            .header {height: 300px;}
+            .aside { width: 100%; height: 300px}
+            .article1 { width:100%; height: 150px;}
+            .article2 {width:100%; height: 150px;}
+            .article3 {width:100%; height: 150px;}
+            .section {float: none; width: 100%; height: 300px}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">반응형 웹 싸이트 제작 테스트</header>
+        <aside  class="aside">왼쪽 메뉴</aside>
+        <section class="article1">섹션1</section>
+        <section class="article2">섹션2</section>
+        <section class="article3">섹션3</section>
+        <footer class="footer">바닥글 위치</footer>
+    </div>
+</body>
+</html>
